@@ -1,0 +1,128 @@
+---
+---
+<section class="multi-plan section-block" id="multi">
+  <div class="container">
+    <div class="section-label">PLAN 01</div>
+    <h2 class="section-heading">Besiegeをやろう大作戦</h2>
+
+    <div class="blocks">
+
+      <div class="block">
+        <div class="block-header">
+          <div class="block-icon" aria-hidden="true">⚔️</div>
+          <h3 class="block-title">金曜21時、開戦。</h3>
+        </div>
+        <div class="block-body">
+          <p>毎週金曜21時から開催します。<br>
+          主催側でサーバーを立てて進行します。<br>
+          もし主催が立てられない場合も、代理開催で続行します。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-header">
+          <div class="block-icon" aria-hidden="true">🔧</div>
+          <h3 class="block-title">毎回、違う遊びを。</h3>
+        </div>
+        <div class="block-body">
+          <p>内容は固定しません。<br>
+          毎回ちょっと違う景色が見える、変化のある金曜を目指します。</p>
+          <div class="event-types">
+            <span class="etype">レギュレーション戦</span>
+            <span class="etype">カオス系交流マルチ</span>
+            <span class="etype">テーマ付きイベント</span>
+            <span class="etype">コンテスト</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-header">
+          <div class="block-icon" aria-hidden="true">📢</div>
+          <h3 class="block-title">内容は事前に告知。</h3>
+        </div>
+        <div class="block-body">
+          <p>開催内容やレギュレーションは事前に案内します。<br>
+          できるだけ早めに出していく方針ですが、初回や特殊回では直前寄りになる場合があります。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.multi-plan {
+  padding: 5rem 0;
+  position: relative;
+  border-top: 1px solid var(--color-stone);
+}
+
+.section-heading {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--color-orange);
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 0 rgba(204,34,0,0.4);
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.block {
+  background: var(--color-bg2);
+  border-left: 4px solid var(--color-orange);
+  padding: 1.8rem 2rem;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.block:hover {
+  border-color: var(--color-gold);
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.block-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.block-title {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--color-cream);
+}
+
+.block-body {
+  color: var(--color-text-muted);
+  line-height: 1.9;
+}
+
+.block-body p {
+  margin-bottom: 1rem;
+}
+
+.event-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.etype {
+  font-family: var(--font-display-mixed);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--color-orange);
+  border: 1px solid var(--color-orange);
+  padding: 0.2em 0.8em;
+  opacity: 0.85;
+}
+</style>

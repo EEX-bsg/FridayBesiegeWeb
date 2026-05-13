@@ -1,0 +1,140 @@
+---
+---
+<section class="next-event" id="next">
+  <div class="container">
+    <div class="section-label">NEXT SESSION</div>
+    <h2 class="section-title">次回開催はこちら</h2>
+    <div class="event-card">
+      <div class="event-card-inner">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <rect x="5" y="10" width="50" height="44" rx="3" stroke="currentColor" stroke-width="3"/>
+            <line x1="5" y1="22" x2="55" y2="22" stroke="currentColor" stroke-width="3"/>
+            <line x1="18" y1="5" x2="18" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <line x1="42" y1="5" x2="42" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <rect x="14" y="29" width="10" height="9" rx="1" fill="currentColor" opacity="0.4"/>
+            <rect x="26" y="29" width="10" height="9" rx="1" fill="currentColor" opacity="0.7"/>
+            <rect x="38" y="29" width="10" height="9" rx="1" fill="currentColor" opacity="0.4"/>
+            <rect x="14" y="42" width="10" height="7" rx="1" fill="currentColor" opacity="0.4"/>
+            <rect x="26" y="42" width="10" height="7" rx="1" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">詳細は以下のURLからご確認ください。</p>
+          <a href="https://hackmd.io/@EEX-slime/Byw3HnZkzl" class="event-link" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">次回開催詳細情報</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="card-deco" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+.next-event {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-label {
+  font-family: var(--font-display-en);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--color-rust);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--color-cream);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-orange), transparent);
+  margin-top: 0.4rem;
+}
+
+.event-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-bg2) 0%, #120e08 100%);
+  border: 1px solid var(--color-stone-light);
+  border-left: 4px solid var(--color-orange);
+  padding: 2rem 2.5rem;
+  overflow: hidden;
+}
+
+.event-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  color: var(--color-orange);
+  opacity: 0.8;
+}
+
+.card-body { flex: 1; }
+
+.card-desc {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.event-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--color-orange);
+  color: #000;
+  font-family: var(--font-display-mixed);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  padding: 0.6em 1.5em;
+  transition: background 0.2s, transform 0.2s;
+  clip-path: polygon(0.5rem 0%,calc(100% - 0.5rem) 0%,100% 50%,calc(100% - 0.5rem) 100%,0.5rem 100%,0% 50%);
+}
+
+.event-link:hover {
+  background: var(--color-gold);
+  transform: translateX(4px);
+  color: #000;
+}
+
+.link-arrow {
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+
+.event-link:hover .link-arrow { transform: translateX(4px); }
+
+/* Corner decoration */
+.card-deco {
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  border-top: 3px solid var(--color-stone-light);
+  border-right: 3px solid var(--color-stone-light);
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .event-card-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>

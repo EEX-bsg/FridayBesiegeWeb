@@ -1,0 +1,154 @@
+---
+---
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner container">
+    <a href="#top" class="nav-logo">
+      <span class="logo-g">G</span><span class="logo-bt">BT</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#next">次回</a></li>
+      <li><a href="#plans">企画</a></li>
+      <li><a href="#multi">マルチ</a></li>
+      <li><a href="#sns">SNS</a></li>
+      <li><a href="#tags">タグ</a></li>
+      <li><a href="#join">参加</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  const toggle = nav?.querySelector('.nav-toggle');
+  const links = nav?.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav?.classList.add('scrolled');
+    } else {
+      nav?.classList.remove('scrolled');
+    }
+  });
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav?.classList.toggle('open', !expanded);
+  });
+
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      toggle?.setAttribute('aria-expanded', 'false');
+      nav?.classList.remove('open');
+    });
+  });
+</script>
+
+<style>
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav.scrolled {
+  background: rgba(14, 11, 7, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--color-stone);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  font-family: var(--font-display-en);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo-g  { color: var(--color-gold); }
+.logo-bt { color: var(--color-orange); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.2rem;
+}
+
+.nav-links a {
+  font-family: var(--font-display-mixed);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.4em 0.8em;
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--color-orange); }
+
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(14,11,7,0.97);
+    border-bottom: 2px solid var(--color-orange);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .site-nav.open .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.9em 1em;
+    border-bottom: 1px solid var(--color-stone);
+    font-size: 1rem;
+  }
+
+  .site-nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .site-nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+</style>

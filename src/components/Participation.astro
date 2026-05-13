@@ -1,0 +1,85 @@
+---
+---
+<section class="participation" id="join">
+  <div class="container">
+    <div class="section-label">HOW TO JOIN</div>
+    <h2 class="section-heading">参加について</h2>
+
+    <div class="rules-grid">
+
+      <div class="rule">
+        <div class="rule-icon" aria-hidden="true">🚪</div>
+        <h3>初参加歓迎。</h3>
+        <p>初めてでも問題ありません。見るだけでも、投稿だけでもOKです。</p>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon" aria-hidden="true">🎙️</div>
+        <h3>ボイスチャット・発言は任意。</h3>
+        <p>無理に話す必要はありません。その場の空気で、できる範囲で大丈夫です。</p>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon" aria-hidden="true">🎬</div>
+        <h3>録画・配信・動画化は自由。</h3>
+        <p>本企画では、参加者による録画・配信・動画化を自由としています。そのため、配信や動画化、公開が難しい方は参加をご遠慮ください。</p>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon" aria-hidden="true">📋</div>
+        <h3>詳細条件は各回の案内へ。</h3>
+        <p>使用レギュレーションなど、回ごとに変わる条件は各回の告知を確認してください。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.participation {
+  padding: 5rem 0;
+  border-top: 1px solid var(--color-stone);
+}
+
+.section-heading {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--color-cream);
+  margin-bottom: 2.5rem;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.rule {
+  background: var(--color-bg2);
+  border: 1px solid var(--color-stone);
+  padding: 1.8rem;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.rule:hover {
+  border-color: var(--color-rust);
+}
+
+.rule-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.rule h3 {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--color-orange-light);
+  margin-bottom: 0.6rem;
+}
+
+.rule p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+</style>

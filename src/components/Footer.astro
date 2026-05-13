@@ -1,0 +1,133 @@
+---
+---
+<footer class="site-footer">
+  <div class="footer-accent" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-cta">
+      <div class="cta-gears" aria-hidden="true">
+        <svg class="fg fg-l" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <use href="#gear-shape"/>
+        </svg>
+        <svg class="fg fg-r" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <use href="#gear-shape"/>
+        </svg>
+      </div>
+      <h2 class="cta-heading">金曜は、Besiegeでいこう。</h2>
+      <div class="cta-tags">
+        <span class="ctag">#ゴールデンBesiegeタイム</span>
+        <span class="ctag">#FridayBesiege</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">本イベントは EEX-slime による非公式ファンイベントです。</p>
+      <p class="footer-copy" >『Besiege』および関連する権利は Spiderling Studios に帰属します。</p>
+      <p class="footer-copy" >本ページの文章・構成など、本イベントのために作成されたオリジナル要素の権利は EEX-slime に帰属します。</p>
+      <p class="footer-copy" >問題がある場合は、権利者の要請に従い速やかに対応します。</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  position: relative;
+  padding: 5rem 0 3rem;
+  border-top: 1px solid var(--color-stone);
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent, rgba(139,58,15,0.06));
+}
+
+.footer-accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-rust) 15%, var(--color-orange) 40%, var(--color-gold) 50%, var(--color-orange) 60%, var(--color-rust) 85%, transparent 100%);
+}
+
+.footer-cta {
+  text-align: center;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.cta-gears {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.fg {
+  position: absolute;
+  fill: rgba(139,58,15,0.1);
+  animation: spin linear infinite;
+}
+
+.fg-l { width: 200px; height: 200px; bottom: -60px; left: -60px; animation-duration: 50s; }
+.fg-r { width: 140px; height: 140px; top: -30px; right: -30px; animation-duration: 35s; animation-direction: reverse; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.cta-heading {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  color: var(--color-gold);
+  text-shadow:
+    3px 3px 0 var(--color-rust),
+    0 0 30px rgba(255,215,0,0.2);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.cta-lines {
+  color: var(--color-text-muted);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 2;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cta-main-line {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.cta-tags {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.ctag {
+  font-family: var(--font-display-mixed);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--color-bg);
+  background: linear-gradient(135deg, var(--color-orange), var(--color-gold));
+  padding: 0.35em 1.2em;
+  letter-spacing: 0.05em;
+  clip-path: polygon(0.6rem 0%,calc(100% - 0.6rem) 0%,100% 50%,calc(100% - 0.6rem) 100%,0.6rem 100%,0% 50%);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--color-stone);
+  padding-top: 2rem;
+}
+
+.footer-note {
+  font-family: var(--font-display-mixed);
+  font-size: 1.1rem;
+  color: var(--color-rust);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+</style>
